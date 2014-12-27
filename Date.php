@@ -97,7 +97,7 @@ class Date {
 	 */
 	public function format($format = 'Y-m-d H:i:s') {
 
-		$num_day = date('w', self::$time) + 1;
+		$num_day = date('N', self::$time);
 		self::replace($format, $num_day, array(
 			'ddd' => 'fweekday',
 			'dd' => 'sweekday',
